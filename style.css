@@ -22,28 +22,84 @@ header {
 	width: 630px;
 }
 
-.container {
-	width: 75px;
-	height: 75px;
-	position: relative;
-	display: inline-block;
-	margin: 7px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*.grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}*/
+.grid {
+	max-width: 600px;
+	margin: 0 auto;
+	display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(6, minmax(75px, 1fr));
+    grid-gap: 5px;
+}
+
+
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 75px;
+  width: 75px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  /*background: #FAB942 url('../img/question.gif') no-repeat center center / contain;*/
+  background: rgb(0,0,0);
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: rgb(255,255,255);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.selected2 {
+  transform: rotateY(180deg);
+}
+
+.match .front {
 }
 
 #menu {
 	text-align: center;
-	padding: 0 10px 0 10px;
+	padding: 0 15px 0px 15px;
+	margin-bottom: 1.2rem;
 	font-size: 1.3rem;
-	height: 90px;
 	display: grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
-}
-.menu {
-	display: inline-block;
-	padding: 0 10px 0 10px;
-	text-align: center;
 }
 
 #reset {
@@ -75,13 +131,9 @@ header {
 	align-items: center;
 }
 
-div > img {
-	width: 100%;
-}
-
-
 @media (max-width: 800px) {
-	.game {
+	.grid {
 	grid-template-columns: repeat(4, minmax(75px, 1fr));
 	}
 }
+
