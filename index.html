@@ -5,94 +5,25 @@
 	<link rel="stylesheet" type="text/css" href="./style.css"> 
 </head>
 <body>
-	<header>The Matching Game</header>
-	<div class="container">
-		<div id="menu" class="grid">
-			<div class="menu timer">	
-				<h2>time elapse</h2>
+	<div class="content">
+		<div>
+			<header>The Matching Game</header>
+			<div id="menu" >
+				<div class="menu timer">
+					<h2>Time Elapsed</h2>	
+					<div id="timer">00:00:00</div>
+				</div>
+				<div class="menu moveCount">			
+					<h2>Moves</h2>
+					<div id="steps">0</div>
+				</div>
+				<div class="menu resetButton">			
+					<button id="reset">reset</button>
+				</div>
 			</div>
-			<div class="menu moveCount">			
-				<h2>moves</h2>
+			<div id="cards">
 			</div>
-			<div class="menu resetButton">			
-				<button id="reset">reset</button>
-			</div>
-		</div>
-		<div class="game grid">
-	 		<div class="subContainer grid">
-	 			<img src="icons/bishopblack.png" class="zone">
-	 		</div>
-	 		<div class="subContainer grid">
-				<img src="icons/bishopwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/kingblack.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/kingwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/pawnblack.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/pawnwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/queenblack.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/queenwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/rookblack.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/rookwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/knigthwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/knigthblack.png" class="zone">
-			</div>
-			 		<div class="subContainer grid">
-	 			<img src="icons/bishopblack.png" class="zone">
-	 		</div>
-	 		<div class="subContainer grid">
-				<img src="icons/bishopwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/kingblack.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/kingwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/pawnblack.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/pawnwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/queenblack.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/queenwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/rookblack.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/rookwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/knigthwhite.png" class="zone">
-			</div>
-			<div class="subContainer grid">
-				<img src="icons/knigthblack.png" class="zone">
-			</div>
-		</div>
-		</div>
 	</div>
+	<script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
